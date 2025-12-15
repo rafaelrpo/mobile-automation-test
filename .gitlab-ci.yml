@@ -1,0 +1,14 @@
+image: node:18
+
+stages:
+  - test
+
+mobile_tests:
+  stage: test
+  script:
+    - npm install
+    - npm run test:android
+  artifacts:
+    when: always
+    paths:
+      - allure-results/
