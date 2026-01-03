@@ -1,10 +1,10 @@
-const allure = require('@wdio/allure-reporter').default;
-
 exports.config = {
   runner: 'local',
   framework: 'cucumber',
 
   specs: ['./test/features/**/*.feature'],
+
+  services: ['appium'],
 
   cucumberOpts: {
     require: ['./test/step-definitions/**/*.js'],
